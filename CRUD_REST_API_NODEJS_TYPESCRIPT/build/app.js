@@ -29,8 +29,6 @@ var helmet_1 = __importDefault(require("helmet"));
 var body_parser_1 = __importDefault(require("body-parser"));
 var Dbconnector_1 = __importDefault(require("./Helper/Dbconnector"));
 var dotenv = __importStar(require("dotenv"));
-var PostRoute_1 = __importDefault(require("./Routes/PostRoute"));
-var UserRoute_1 = __importDefault(require("./Routes/UserRoute"));
 var CustomerRoute_1 = __importDefault(require("./Routes/CustomerRoute"));
 var morgan_1 = __importDefault(require("morgan"));
 dotenv.config();
@@ -48,10 +46,6 @@ console.log("process.env.DB_CONNECION:", process.env.DB_CONNECION);
 var dbConnectionString = (_a = process.env.DB_CONNECION) !== null && _a !== void 0 ? _a : "";
 var server_port = (_b = process.env.SERVER_PORT) !== null && _b !== void 0 ? _b : "";
 (0, Dbconnector_1.default)(dbConnectionString);
-//user route
-app.use("/user", UserRoute_1.default);
-//post route
-app.use("/post", PostRoute_1.default);
 //client route
 app.use("/customer", CustomerRoute_1.default);
 //404 response

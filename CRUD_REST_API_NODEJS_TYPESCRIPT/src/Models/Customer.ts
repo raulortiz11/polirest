@@ -1,5 +1,5 @@
 import mongoose, { Schema } from "mongoose";
-import { Ipost } from "../Types/Ipost";
+import { Icustomer } from "../Types/Icustomer";
 const CustomerSchema: Schema = new Schema(
   {
     documentType: {
@@ -53,5 +53,5 @@ const CustomerSchema: Schema = new Schema(
   },
   { timestamps: true }
 );
-const Customer = mongoose.model<Ipost>("Customer", CustomerSchema);
+const Customer = mongoose.model<Icustomer>("Customer", CustomerSchema);
 export default Customer;

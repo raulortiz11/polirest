@@ -5,8 +5,6 @@ import helmet from "helmet";
 import bodyParser from "body-parser";
 import connectorDb from "./Helper/Dbconnector";
 import * as dotenv from "dotenv";
-import PostRoute from "./Routes/PostRoute";
-import UserRoute from "./Routes/UserRoute";
 import ClientRoute from "./Routes/CustomerRoute";
 import morgan from "morgan";
 

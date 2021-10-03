@@ -1,8 +1,6 @@
 import { Request, Response, NextFunction } from "express";
 import Customer from "../Models/Customer";
-import { Ipost } from "../Types/Ipost";
 import { Icustomer } from "../Types/Icustomer";
-import { PostValidation } from "../Validations/PostValidation";
 import { CustomerIdValidation, CustomerValidation, UpdateCustomerValidation } from "../Validations/CustomerValidation";
 import { IUpadateCustomer } from "../Types/IUpadateCustomer";
 
