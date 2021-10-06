@@ -5,8 +5,7 @@ import helmet from "helmet";
 import bodyParser from "body-parser";
 import connectorDb from "./Helper/Dbconnector";
 import * as dotenv from "dotenv";
-import PostRoute from "./Routes/PostRoute";
-import UserRoute from "./Routes/UserRoute";
+import ClientRoute from "./Routes/CustomerRoute";
 import morgan from "morgan";
 
 dotenv.config();
@@ -29,10 +28,8 @@ const dbConnectionString: string = process.env.DB_CONNECION ?? "";
 const server_port = process.env.SERVER_PORT ?? "";
 connectorDb(dbConnectionString);
 
-//user route
-app.use("/user", UserRoute);
-//post route
-app.use("/post", PostRoute);
+//client route
+app.use("/customer", ClientRoute);
 
 //404 response
 app.use((error: any, res: Response, next: NextFunction) => {
